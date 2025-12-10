@@ -33,7 +33,7 @@ namespace Makaretu.Dns
 
         static readonly TimeSpan maxLegacyUnicastTTL = TimeSpan.FromSeconds(10);
         static readonly ILog log = LogManager.GetLogger(typeof(MulticastService));
-        static readonly IPNetwork[] LinkLocalNetworks = new[] { IPNetwork.Parse("169.254.0.0/16"), IPNetwork.Parse("fe80::/10") };
+        static readonly IPNetwork2[] LinkLocalNetworks = new[] { IPNetwork2.Parse("169.254.0.0/16"), IPNetwork2.Parse("fe80::/10") };
 
         List<NetworkInterface> knownNics = new List<NetworkInterface>();
         int maxPacketSize;

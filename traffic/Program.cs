@@ -1,11 +1,12 @@
 ﻿using Makaretu.Dns;
 using System;
+using System.Threading;
 
 namespace traffic
 {
     class Program
     {
-        static readonly object ttyLock = new object();
+        static readonly Lock ttyLock = new();
 
         static void Main(string[] args)
         {
